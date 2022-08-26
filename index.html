@@ -8,78 +8,36 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
-<body>
-    <div class="wrapper">
-        <li class="add-box">
-            <div class="icon"><i class="uil uil-plus"></i></div>
-            <p>Add new note</p>
-        </li>
-        <li class="note">
-            <div class="details">
-                <p>This is a Title</p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+  <body>
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <p></p>
+            <i class="uil uil-times"></i>
+          </header>
+          <form action="#">
+            <div class="row title">
+              <label>Title</label>
+              <input type="text" spellcheck="false">
             </div>
-            <div class="botton-content">
-                <span>April 3, 2022</span>
-                <div class="settings">
-                    <i class="uil uil-ellipse-h"></i>
-                    <ul class="menu">
-                        <li><i class="uil uil-pen" >Edit</i></li> 
-                        <li><i class="uil uil-trash" >Delete</i></li> </li>
-                    </ul>
-                </div>
+            <div class="row description">
+              <label>Description</label>
+              <textarea spellcheck="false"></textarea>
             </div>
-        </li>
-        <li class="note">
-            <div class="details">
-                <p>This is a Title</p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-            </div>
-            <div class="botton-content">
-                <span>April 3, 2022</span>
-                <div class="settings">
-                    <i class="uil uil-ellipse-h"></i>
-                </div>
-            </div>
-        </li>
-        <li class="note">
-            <div class="details">
-                <p>This is a Title</p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-            </div>
-            <div class="botton-content">
-                <span>April 3, 2022</span>
-                <div class="settings">
-                    <i class="uil uil-ellipse-h"></i>
-                </div>
-            </div>
-        </li>
-        <li class="note">
-            <div class="details">
-                <p>This is a Title</p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-            </div>
-            <div class="botton-content">
-                <span>April 3, 2022</span>
-                <div class="settings">
-                    <i class="uil uil-ellipse-h"></i>
-                </div>
-            </div>
-        </li>
-        <li class="note">
-            <div class="details">
-                <p>This is a Title</p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-            </div>
-            <div class="botton-content">
-                <span>April 3, 2022</span>
-                <div class="settings">
-                    <i class="uil uil-ellipse-h"></i>
-                </div>
-            </div>
-        </li>
+            <button></button>
+          </form>
+        </div>
+      </div>
     </div>
+    <div class="wrapper">
+      <li class="add-box">
+        <div class="icon"><i class="uil uil-plus"></i></div>
+        <p>Add new note</p>
+      </li>
+    </div>
+
+    <script src="script.js"></script>
     
-   <script src="script.js"></script>
-</body>
+  </body>
 </html>
