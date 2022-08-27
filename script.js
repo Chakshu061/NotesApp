@@ -1,4 +1,4 @@
-//popup form for adding new notes
+//popup form for adding new note
 const addBox = document.querySelector(".add-box"),
 popupBox = document.querySelector(".popup-box"),
 popupTitle = popupBox.querySelector("header p"),
@@ -7,12 +7,15 @@ titleTag = popupBox.querySelector("input"),
 descTag = popupBox.querySelector("textarea"),
 addBtn = popupBox.querySelector("button");
 
+
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 //getting localStorage notes if exist and parsing them
 //to js object else parsing an empty array to notes
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");
+
 let isUpdate = false, updateId;
+
 
 //form will popup when clicked on the + sign by adding show
 addBox.addEventListener("click", () => {
@@ -31,7 +34,9 @@ closeIcon.addEventListener("click", () => {
     document.querySelector("body").style.overflow = "auto";
 });
 
-function showNotes() {
+
+function showNotes(){
+
     if(!notes) return;
     document.querySelectorAll(".note").forEach(li => li.remove());
     notes.forEach((note, id) => {
@@ -57,7 +62,8 @@ function showNotes() {
 }
 showNotes();
 
-function showMenu(elem) {
+
+function showMenu(elem){
     elem.parentElement.classList.add("show");
     document.addEventListener("click", e => {
         if(e.target.tagName != "I" || e.target != elem) {
@@ -96,6 +102,7 @@ addBtn.addEventListener("click", e => {
         day = currentDate.getDate(),
         year = currentDate.getFullYear();
         let noteInfo = {title, description, date: `${month} ${day}, ${year}`}
+        
         if(!isUpdate) {
             notes.push(noteInfo);
         } else {
@@ -105,6 +112,7 @@ addBtn.addEventListener("click", e => {
         localStorage.setItem("notes", JSON.stringify(notes));
         showNotes();
         closeIcon.click();
+        showNotes();
     }
 });
 
